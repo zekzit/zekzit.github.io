@@ -2,56 +2,89 @@
   
     {
 
-      "title"    : "Difference between font formats",
-      "url"      : "/2019/08/31/difference-between-font-formats",
+      "title"    : "ก้าวแรกสู่ภาษาแบบ Functional อย่างเต็มตัว",
+      "url"      : "/2020/03/21/functional-programming",
       "category" : "",
-      "tags"     : "typography",
-      "date"     : "2019-08-31 00:00:00 +0700",
-      "description" : "What is the difference between various font formats?"
+      "tags"     : "functional, programming",
+      "date"     : "2020-03-21 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Command line น่ารู้ #1",
+      "url"      : "/2019/08/12/linux-command-line-1",
+      "category" : "",
+      "tags"     : "linux, cli",
+      "date"     : "2019-08-12 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Service Worker is not that superhero!",
+      "url"      : "/2019/08/06/service-worker-is-not-that-superhero",
+      "category" : "",
+      "tags"     : "web, development",
+      "date"     : "2019-08-06 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "บันทึกการใช้งาน Vuex + localForage",
+      "url"      : "/2019/07/27/vuex-localforage",
+      "category" : "",
+      "tags"     : "vue, vuex, localforage",
+      "date"     : "2019-07-27 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "PostgreSQL vs. MySQL vs. SQLite",
+      "url"      : "/2018/04/24/postgresql-vs-mysql-vs-sqlite",
+      "category" : "",
+      "tags"     : "database",
+      "date"     : "2018-04-24 00:00:00 +0700",
+      "description" : ""
 
     } ,
   
     {
 
       "title"    : "Automated installation of software on fresh Mac",
-      "url"      : "/2018/04/24/automated-install-on-mac",
+      "url"      : "/2018/04/24/automated-installation-of-software-on-fresh-mac",
       "category" : "",
-      "tags"     : "jekyll, coding",
+      "tags"     : "automation, macos",
       "date"     : "2018-04-24 00:00:00 +0700",
-      "description" : "Generating comments on static sites with Staticman"
+      "description" : ""
 
     } ,
   
     {
 
-      "title"    : "PostgreSQL vs. MySQL vs. SQLite",
-      "url"      : "/2018/04/23/postgresql-mysql-sqlite",
-      "category" : "",
-      "tags"     : "database",
-      "date"     : "2018-04-23 00:00:00 +0700",
-      "description" : "Database comparison on popular RDBMS"
-
-    } ,
-  
-    {
-
-      "title"    : "My Docker 101 - An Introduction",
-      "url"      : "/2018/03/14/my-docker-101-introduction",
+      "title"    : "My Docker 101: An Introduction",
+      "url"      : "/2018/03/13/my-docker-101-an-introduction",
       "category" : "",
       "tags"     : "docker, infrastructure",
-      "date"     : "2018-03-14 00:00:00 +0700",
-      "description" : "My first try on running application on Docker"
+      "date"     : "2018-03-13 00:00:00 +0700",
+      "description" : ""
 
     } ,
   
     {
 
-      "title"    : "ทำไมถึง ❤️ Ruby on Rails",
+      "title"    : "ทำไมถึง ❤️ Ruby on Rails",
       "url"      : "/2017/11/21/why-love-rails",
       "category" : "",
       "tags"     : "ruby on rails",
       "date"     : "2017-11-21 00:00:00 +0700",
-      "description" : "The reason why I love Ruby on Rails"
+      "description" : ""
 
     } 
   
