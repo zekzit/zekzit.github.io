@@ -17,6 +17,7 @@ Here is a good example for more automated Mac install:
 
 * <https://gist.github.com/millermedeiros/6615994>
 * <https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers>
+
 More Mac settings I expected to do:
 
 * Never sleep while on power adapter

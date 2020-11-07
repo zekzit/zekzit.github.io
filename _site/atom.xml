@@ -4,7 +4,7 @@
  <title>MM's Blog</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-11-07T23:04:57+07:00</updated>
+ <updated>2020-11-07T23:13:05+07:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -77,15 +77,18 @@
    <id>http://localhost:4000/2019/08/06/service-worker-is-not-that-superhero</id>
    <content type="html">&lt;p&gt;ครั้งนี้เป็นบันทึกความพยายามในการ Hack เล็ก ๆ ในตัว Web Application ตัวหนึ่ง เมื่อเรามีโจทย์ว่าเราต้องการที่จะเปลี่ยนข้อมูลใน Cookie ในทุก ๆ Request ที่เกิดขึ้นให้เป็นไปตามที่เราต้องการ จากเดิมที่มันถูกทำงานอย่างอัตโนมัติโดย Browser ของเรา&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/0_EaBXD66UNdf-4EJR.jpg&quot; alt=&quot;อารมณ์แบบว่าอยากจะดัดช้อนตามใจเราเลยครับ&quot; /&gt;อารมณ์แบบว่าอยากจะดัด Request headers ตามใจเราต้องการ ภาพนี้ผุดขึ้นมาในหัวเลยครับทีนี้เราก็มามองหา Superhero ของเราครับ Superhero ของเราจะต้องมีพลังพิเศษอยู่ประมาณนี้ครับ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/0_EaBXD66UNdf-4EJR.jpg&quot; alt=&quot;อารมณ์แบบว่าอยากจะดัดช้อนตามใจเราเลยครับ&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;อารมณ์แบบว่าอยากจะดัด Request headers ตามใจเราต้องการ ภาพนี้ผุดขึ้นมาในหัวเลยครับทีนี้เราก็มามองหา Superhero ของเราครับ Superhero ของเราจะต้องมีพลังพิเศษอยู่ประมาณนี้ครับ&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;ดักจับทุก Request ที่ Browser เรียกออกไปได้&lt;/li&gt;
   &lt;li&gt;แก้ไข Request ที่กำลังจะบินผ่านหน้าเราไปได้&lt;/li&gt;
   &lt;li&gt;สามารถเข้าถึง Storage ที่เรา Map ค่าเอาไว้ได้&lt;/li&gt;
-  &lt;li&gt;อ่านค่าบางอย่างใน DOM ได้
-ด้วยความที่ศึกษามาบ้าง ก็พอจะรู้ว่า Service Worker จะทำหน้าที่เป็นคล้าย ๆ Network Proxy คือเราสามารถจะจับทุก Request ที่จะวิ่งผ่าน Browser ไปได้ที่นี่ (มันจะเกิด FetchEvent ขึ้นทุก ๆ ครั้งที่มีการเรียก Network ให้เราใส่ Listener เข้าไปได้) และนอกจากนั้น เรายังสามารถบิดงอ Request ดังกล่าวได้ด้วย (ใช้ FetchEvent.respondWith() และ Override ด้วยฟังก์ชันที่ Return Response ใหม่ที่เราปรุงแต่งแล้วกลับไป) เจ๋งป่าวล่ะครับ?&lt;/li&gt;
+  &lt;li&gt;อ่านค่าบางอย่างใน DOM ได้&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;ด้วยความที่ศึกษามาบ้าง ก็พอจะรู้ว่า Service Worker จะทำหน้าที่เป็นคล้าย ๆ Network Proxy คือเราสามารถจะจับทุก Request ที่จะวิ่งผ่าน Browser ไปได้ที่นี่ (มันจะเกิด FetchEvent ขึ้นทุก ๆ ครั้งที่มีการเรียก Network ให้เราใส่ Listener เข้าไปได้) และนอกจากนั้น เรายังสามารถบิดงอ Request ดังกล่าวได้ด้วย (ใช้ FetchEvent.respondWith() และ Override ด้วยฟังก์ชันที่ Return Response ใหม่ที่เราปรุงแต่งแล้วกลับไป) เจ๋งป่าวล่ะครับ?&lt;/p&gt;
 
 &lt;p&gt;Use case ปกติของ Service Worker ในสองความสามารถนี้ ที่เห็นอย่างดาษดื่นคือเค้าจะนำ Cache API เข้ามาร่วมด้วย คือตัว Service Worker ก็จะสกรีนก่อนว่า อ๋อ เรียก URL นี้นะ มีในแคชรึเปล่า ถ้ามีก็เอาในแคชก่อน เราก็จะ Response หน้าเว็บเพจของเรากลับด้วย Response ปลอม ๆ ที่เราสร้างขึ้นมาจากในนี้นี่เองครับ&lt;/p&gt;
 
@@ -93,11 +96,15 @@
 
 &lt;p&gt;สังเกตนะครับ ว่าเราใส่ Header เข้าไปสองตัว ได้แก่ “Cookie” และ “Cookies” ซึ่งเป็นอันที่เค้าใช้ส่ง Cookie อย่างจริงจัง และอีกอันเป็นคำคล้าย ๆ กันที่ผมใส่เข้าไปเองครับ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_nXVPGE-0QeE1VwwTDMpNmg.png&quot; alt=&quot;&quot; /&gt;ทีนี้เราก็มาลองกันครับ ก็ตามเงื่อนไข Service Worker ก็คือต้องทำงานใน Trusted environment ซึ่งก็คือทำงานบน https หรือ localhost อะไรก็ตามครับ ซึ่งเราลองเล่นๆ เราก็จะรันอยู่บน localhost ครับ และแน่นอน.. มันทำงานได้แล้ว เย้~~&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_nXVPGE-0QeE1VwwTDMpNmg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ทีนี้เราก็มาลองกันครับ ก็ตามเงื่อนไข Service Worker ก็คือต้องทำงานใน Trusted environment ซึ่งก็คือทำงานบน https หรือ localhost อะไรก็ตามครับ ซึ่งเราลองเล่นๆ เราก็จะรันอยู่บน localhost ครับ และแน่นอน.. มันทำงานได้แล้ว เย้~~&lt;/p&gt;
 
 &lt;p&gt;ผลลัพธ์ที่ได้ก็ออกมาตามรูปข้างล่างนี้นะครับ วิธีทดลองคือเราก็ลองเรียกโค้ด fetch ธรรมดา ๆ ไปยัง API ก็จะเกิด Request แบบในบรรทัดแรกทางซ้าย ซึ่งเมื่อ Request วิ่งไปถึง Service Worker แล้ว Request นี้ก็จะถูกแปลง แล้วก็เรียกอีกครั้งโดย Service Worker (ที่มีฟันเฟืองข้างหน้า) เราก็สามารถกดดู Request Headers ได้ครับ ว่าจริง ๆ แล้ว Browser ส่งอะไรออกไปได้บ้าง&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_8Du8qxy3pFyrnk29_549dg.png&quot; alt=&quot;&quot; /&gt;ผลลัพธ์การแก้ไข Request ที่ได้จาก Service Workerผลปรากฏว่า Header “Cookie” ของเราหายไปครับ ส่วนอีกอันที่ใส่ปลอม ๆ เอาไว้ว่า “Cookies” ยังปรากฏอยู่ อันนี้เคยไปอ่านเจอเอกสารฉบับนึงเค้าบอกว่า Header ที่ชื่อว่า “Set-Cookie” นี่ ตัว Browser จะไม่ให้อ่าน Header ตัวนี้เองได้ครับ แต่สุดท้าย Browser ก็จะจัดเตรียมไว้ให้อยู่ใน document.cookies แทน ซึ่งส่วนตัวผมคิดว่า Header “Cookie” นี่ ก็คงจะถูกส่งไปไม่ได้ด้วยเหตุผลเดียวกันครับ (เพื่อความปลอดภัย?)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_8Du8qxy3pFyrnk29_549dg.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ผลลัพธ์การแก้ไข Request ที่ได้จาก Service Workerผลปรากฏว่า Header “Cookie” ของเราหายไปครับ ส่วนอีกอันที่ใส่ปลอม ๆ เอาไว้ว่า “Cookies” ยังปรากฏอยู่ อันนี้เคยไปอ่านเจอเอกสารฉบับนึงเค้าบอกว่า Header ที่ชื่อว่า “Set-Cookie” นี่ ตัว Browser จะไม่ให้อ่าน Header ตัวนี้เองได้ครับ แต่สุดท้าย Browser ก็จะจัดเตรียมไว้ให้อยู่ใน document.cookies แทน ซึ่งส่วนตัวผมคิดว่า Header “Cookie” นี่ ก็คงจะถูกส่งไปไม่ได้ด้วยเหตุผลเดียวกันครับ (เพื่อความปลอดภัย?)&lt;/p&gt;
 
 &lt;p&gt;เอาเป็นว่าวิธีนี้ก็ไม่เวิร์กไปนะครับ สำหรับความพยายามที่จะใช้ Service Worker เป็น Superhero ของเราในโจทย์นี้… แต่ด้วยความใคร่รู้ เราจึงเหลืออีก 2 ข้อที่ยังสงสัยครับ คือ การเข้าถึง Window Storage และการอ่านค่า DOM&lt;/p&gt;
 
@@ -105,8 +112,9 @@
 
 &lt;p&gt;เอาเป็นว่าดับฝันกันไปครับ ก็เลยจดไว้เตือนความจำนิดหน่อย เจอกันโอกาสหน้าครับ&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2015/03/introduction-to-fetch&quot;&gt;&lt;br /&gt;
-https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/web/updates/2015/03/introduction-to-fetch&quot;&gt;https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt;&lt;/p&gt;
 
 </content>
  </entry>
@@ -118,7 +126,7 @@ https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt
    <id>http://localhost:4000/2019/07/27/vuex-localforage</id>
    <content type="html">&lt;p&gt;บทความนี้สำหรับ Vue Developer ผู้ซึ่งผ่านการใช้งาน Vue มาในระดับหนึ่งนะครับ ซึ่งถ้าเราใช้งาน Vue มาสักพักแล้ว สิ่งที่เราหลีกเลี่ยงไม่ได้ก็คือการเก็บ state ของ application เรา ซึ่งจริง ๆ ตัว Vue มันก็เป็นตัวจัดการ view เท่านั้น ส่วนตัวที่เป็น state management เราก็สามารถเลือกใช้ได้หลาย ๆ ตัวตามใจเรา แต่สิ่งตัวที่มันค่อนข้างง่ายกับชีวิตเรามากที่สุด ก็คือตัว state management ของ Vue เอง ซึ่งได้แก่ Vuex นี่เอง&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/0_gSqupDxO1Al_7U5e.png&quot; alt=&quot;&quot; /&gt;Vuex (from: &lt;a href=&quot;https://vuex.vuejs.org/&quot;&gt;https://vuex.vuejs.org/&lt;/a&gt;)ในบางกรณีที่เราต้องการเก็บค่า state ของ application ของเราด้วยเหตุผลบางประการ เช่น เรื่องของ performance หรือการที่เราเก็บค่าพื้นฐานที่จะใช้ใน application ของเรา หรือเราอยากเก็บ state เพื่อความสะดวกในการ dev เราก็จำเป็นจะต้องมีการ persist state เอาไว้ใน storage ของ browser สิ่งที่แนะนำก็จะเป็น package ชื่อ “vuex-persist” (&lt;a href=&quot;https://www.npmjs.com/package/vuex-persist&quot;&gt;https://www.npmjs.com/package/vuex-persist&lt;/a&gt;) ซึ่ง package นี้จะสะดวกมากในการที่จะ persist ค่าลงใน storage ต่าง ๆ ที่ browser รองรับเอาไว้ โดย storage หลัก ๆ ก็จะมีอยู่ตามนี้ครับ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/0_gSqupDxO1Al_7U5e.png&quot; alt=&quot;&quot; /&gt;Vuex (from: &lt;a href=&quot;https://vuex.vuejs.org/&quot;&gt;https://vuex.vuejs.org/&lt;/a&gt;) ในบางกรณีที่เราต้องการเก็บค่า state ของ application ของเราด้วยเหตุผลบางประการ เช่น เรื่องของ performance หรือการที่เราเก็บค่าพื้นฐานที่จะใช้ใน application ของเรา หรือเราอยากเก็บ state เพื่อความสะดวกในการ dev เราก็จำเป็นจะต้องมีการ persist state เอาไว้ใน storage ของ browser สิ่งที่แนะนำก็จะเป็น package ชื่อ “vuex-persist” (&lt;a href=&quot;https://www.npmjs.com/package/vuex-persist&quot;&gt;https://www.npmjs.com/package/vuex-persist&lt;/a&gt;) ซึ่ง package นี้จะสะดวกมากในการที่จะ persist ค่าลงใน storage ต่าง ๆ ที่ browser รองรับเอาไว้ โดย storage หลัก ๆ ก็จะมีอยู่ตามนี้ครับ&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Cookie เป็นชิ้นข้อมูลเล็ก ๆ ที่เก็บอยู่ใน Browser โดยที่ข้อมูลนี้จะถูกส่งไปที่ server เพื่อเป็น hint ให้ server สามารถทำงานบางอย่างให้เราได้ ขนาดของ cookie ต้องไม่เกิน 4KB&lt;/li&gt;
@@ -127,11 +135,17 @@ https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt
 โดยส่วนตัวในงานที่ทำ การเริ่มต้นใช้งาน Vuex + vue-persist + Local Storage ก็เป็นอะไรที่แฮปปี้มาก ด้วยสามองค์ประกอบนี้ทำให้การ dev ทำได้ง่ายขึ้น คือเราสามารถ reload page ได้โดยที่ไม่ต้องที่จะต้องเล่นโปรแกรมเพื่อให้เราได้ข้อมูลตามที่เราต้องการตอนเรา dev อยู่ แต่พอผ่านช่วงกระบวนการ dev แล้วเปลี่ยนมาเป็นการทดสอบโปรแกรมกับข้อมูลจริงที่มีขนาดใหญ่ขึ้น เราก็พบกับ error บางอย่างที่ไม่น่าปรารถนาขึ้น&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_tCH9vhsCxBUDFBYkhdhoIw.png&quot; alt=&quot;&quot; /&gt;Storage เกินโควตาหลังจากพยายามใส่ข้อมูลมาก ๆ ซึ่งเป็นฝันร้ายของนักพัฒนาอย่างเราทีนี้ตัวเลือกเดียวที่เหลืออยู่จาก storage ข้างต้นที่ browser provided ให้ ก็จะเป็นตัว IndexedDB ซึ่งจะทำให้ความแฮปปี้ของเราหายไป เนื่องจากว่า API ที่ใช้ในการติดต่อกับ IndexedDB จะมีความซับซ้อนกว่า Window Storage API (แต่เอาเข้าจริงเราก็ให้ตัว vue-persist จัดการอยู่ดี) ทีนี้ localForage ของเราก็จะเข้ามาเป็นพระเอกในงานนี้ครับ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_tCH9vhsCxBUDFBYkhdhoIw.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_eJKWL3otVqhhjAxqzRd_pQ.png&quot; alt=&quot;&quot; /&gt;API ของ Window Storage ก็จะโง่ ๆ ง่าย ๆ แบบนี้localForage เป็นโปรเจคที่ถูกพัฒนาโดย Mozilla ซึ่งหลัก ๆ แล้ว localForage เป็น library ที่ทำให้เราใช้งาน IndexedDB หรือ WebSQL ได้ง่ายขึ้น โดยอารมณ์จะเป็นคล้าย ๆ wrapper ให้เราเรียกใช้ asynchronus storage ได้แบบเดียวกันกับการใช้ Window Storage เลย โดยเราไม่จำเป็นจะต้องจัดการการสร้าง database หรือเขียน query ใด ๆ ให้วุ่นวาย ถ้าหากเราจะใช้งานเป็น key-value ง่าย ๆ&lt;/p&gt;
+&lt;p&gt;Storage เกินโควตาหลังจากพยายามใส่ข้อมูลมาก ๆ ซึ่งเป็นฝันร้ายของนักพัฒนาอย่างเราทีนี้ตัวเลือกเดียวที่เหลืออยู่จาก storage ข้างต้นที่ browser provided ให้ ก็จะเป็นตัว IndexedDB ซึ่งจะทำให้ความแฮปปี้ของเราหายไป เนื่องจากว่า API ที่ใช้ในการติดต่อกับ IndexedDB จะมีความซับซ้อนกว่า Window Storage API (แต่เอาเข้าจริงเราก็ให้ตัว vue-persist จัดการอยู่ดี) ทีนี้ localForage ของเราก็จะเข้ามาเป็นพระเอกในงานนี้ครับ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_gCAnOHwIqzfrFpK2n_od7w.png&quot; alt=&quot;&quot; /&gt;API ของ localForage หน้าตาคล้าย Window Storage API แต่ผิดกันตรงที่จะ return Promise และที่สำคัญคือรองรับ TypeScript ด้วยและด้วยความโชคดี vuex-perist รองรับ localForage ด้วย!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_eJKWL3otVqhhjAxqzRd_pQ.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;API ของ Window Storage ก็จะโง่ ๆ ง่าย ๆ แบบนี้localForage เป็นโปรเจคที่ถูกพัฒนาโดย Mozilla ซึ่งหลัก ๆ แล้ว localForage เป็น library ที่ทำให้เราใช้งาน IndexedDB หรือ WebSQL ได้ง่ายขึ้น โดยอารมณ์จะเป็นคล้าย ๆ wrapper ให้เราเรียกใช้ asynchronus storage ได้แบบเดียวกันกับการใช้ Window Storage เลย โดยเราไม่จำเป็นจะต้องจัดการการสร้าง database หรือเขียน query ใด ๆ ให้วุ่นวาย ถ้าหากเราจะใช้งานเป็น key-value ง่าย ๆ&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/migrated/1_gCAnOHwIqzfrFpK2n_od7w.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;API ของ localForage หน้าตาคล้าย Window Storage API แต่ผิดกันตรงที่จะ return Promise และที่สำคัญคือรองรับ TypeScript ด้วยและด้วยความโชคดี vuex-perist รองรับ localForage ด้วย!&lt;/p&gt;
 
 &lt;p&gt;แต่ทีนี้ด้วยธรรมชาติที่ต่างกันของ Window Storage API กับ Asynchronus Storage ก็คือความเป็น Sync/Async API ซึ่งจริง ๆ สมัยที่ใช้ Local Storage นั้น ตัว vuex-persist จะ block การทำงานของการ initialize vue ซึ่งทำให้การ restore state เกิดขึ้นก่อนการที่ Vue application ของเราจะเริ่มทำงาน ทำให้ application ของเราสามารถที่จะทำงานได้โดยมั่นใจได้ว่า state ของ application เราได้กลับมา 100% แล้ว แต่ในกรณีของการใช้งานของ localForage ซึ่งมี API เป็นแบบ asynchronus ทำให้เราไม่สามารถแน่ใจได้ว่า state ของเราจะกลับมาชัวร์ ๆ ก่อนที่ Vue application ของเราจะเริ่มทำงาน&lt;/p&gt;
 
@@ -159,8 +173,10 @@ https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt
 
 &lt;p&gt;Many projects I deal with are web-based. So I can eliminate SQLite from my choice (It’s file based and I think it isn’t good on scalable). But MySQL and PostgreSQL are still in my choices. I familiar with MySQL so I chose MySQL as DB in my many projects. But I still wonder when do I need to use PostgreSQL. And today I do some research on this question.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems&quot;&gt;SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database Management Systems&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://db-engines.com/en/system/MySQL%3BPostgreSQL&quot;&gt;System Properties Comparison MySQL vs. PostgreSQL&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems&quot;&gt;SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database Management Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://db-engines.com/en/system/MySQL%3BPostgreSQL&quot;&gt;System Properties Comparison MySQL vs. PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;After reading those two articles. (my research isn’t deep more than reading one on two articles, sorry :D) I realize that MySQL is gain more popularity than PostgreSQL in term of easy to use and has capability to handle several projects. But it some projects that has more complex query, complex procedure, fully-implemented SQL from standards and need more data integrity. PostgreSQL is a good option to use.&lt;/p&gt;
 
@@ -186,10 +202,12 @@ https://developers.google.com/web/updates/2015/03/introduction-to-fetch&lt;/a&gt
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://gist.github.com/millermedeiros/6615994&quot;&gt;https://gist.github.com/millermedeiros/6615994&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&quot;&gt;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&lt;/a&gt;
-More Mac settings I expected to do:&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&quot;&gt;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More Mac settings I expected to do:&lt;/p&gt;
+
+&lt;ul&gt;
   &lt;li&gt;Never sleep while on power adapter&lt;/li&gt;
   &lt;li&gt;Tap to click&lt;/li&gt;
   &lt;li&gt;Three-finger drag&lt;/li&gt;
@@ -232,21 +250,21 @@ Please feel free to follow me if you’re interesting in this topic too.&lt;/li&
 &lt;h3 id=&quot;ความน่ารักเหนือคู่แข่ง&quot;&gt;ความน่ารักเหนือคู่แข่ง&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;**ดีพร้อม **เมื่อเทียบกับเฟรมเวิร์กอื่น ๆ แล้ว Rails เป็นเฟรมเวิร์กที่ครบเครื่องมาก ไม่ว่าจะเป็นส่วนของ ORM, Database Migration, SCSS, CoffeeScript, Template, Mailer และอื่น ๆ อีกมาก เรียกได้ว่าถ้าเราเลือกใช้เฟรมเวิร์กนี้แล้ว เราไม่ต้องหา Module อื่น ๆ มาเพิ่มเติมมากมายนักสำหรับการทำ Web Application ธรรมดา ๆ สักอันหนึ่ง&lt;/li&gt;
-  &lt;li&gt;**คุยกันได้, คุยกันง่าย **ด้วยตัวภาษา Ruby เองซึ่งเป็นภาษาที่ค่อนข้าง High level ทำให้ตัวโค้ดค่อนข้างสื่อความหมาย และตัวเฟรมเวิร์กเองก็ค่อนข้างจะตระเตรียมฟังก์ชันพื้นฐานให้ครบถ้วน ทำให้โค้ดที่เขียนเป็น Logic ทำได้สั้นและกระชับ นอกจากนี้ตัว Rails ยังเตรียม Console ไว้ เพื่อให้เราสามารถเขียนคำสั่งเพื่อจัดการกับ Model หรือลองส่วนของโค้ดได้ทันที&lt;/li&gt;
-  &lt;li&gt;**พร้อมขี่ **นอกจากว่าผู้เขียนจะได้มีโอกาสทำเว็บใหม่ทั้งหมดจาก Rails แล้ว ผู้เขียนยังได้มีโอกาสที่จะนำเอาโปรเจค Open Source ที่ทำจาก RoR มา Custom พบว่าเราสามารถที่จะแก้โปรแกรมนั้นโดยเราเขียนโค้ดให้ “ขี่” อยู่บน Application เดิม ๆ ได้ โดยเราสามารถที่จะ Override class ในส่วนของ Logic หรือแม้แต่สั่งให้ Render หน้าเว็บเพจโดยแทรกส่วนที่เราต้องการเสริมไปอย่างเดียวก็ได้
-    &lt;h3 id=&quot;แต่มันก็ไม่ได้น่ารักไปซะหมด&quot;&gt;แต่มันก็ไม่ได้น่ารักไปซะหมด..&lt;/h3&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ดีพร้อม&lt;/strong&gt; เมื่อเทียบกับเฟรมเวิร์กอื่น ๆ แล้ว Rails เป็นเฟรมเวิร์กที่ครบเครื่องมาก ไม่ว่าจะเป็นส่วนของ ORM, Database Migration, SCSS, CoffeeScript, Template, Mailer และอื่น ๆ อีกมาก เรียกได้ว่าถ้าเราเลือกใช้เฟรมเวิร์กนี้แล้ว เราไม่ต้องหา Module อื่น ๆ มาเพิ่มเติมมากมายนักสำหรับการทำ Web Application ธรรมดา ๆ สักอันหนึ่ง&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;คุยกันได้, คุยกันง่าย&lt;/strong&gt; ด้วยตัวภาษา Ruby เองซึ่งเป็นภาษาที่ค่อนข้าง High level ทำให้ตัวโค้ดค่อนข้างสื่อความหมาย และตัวเฟรมเวิร์กเองก็ค่อนข้างจะตระเตรียมฟังก์ชันพื้นฐานให้ครบถ้วน ทำให้โค้ดที่เขียนเป็น Logic ทำได้สั้นและกระชับ นอกจากนี้ตัว Rails ยังเตรียม Console ไว้ เพื่อให้เราสามารถเขียนคำสั่งเพื่อจัดการกับ Model หรือลองส่วนของโค้ดได้ทันที&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;พร้อมขี่&lt;/strong&gt; นอกจากว่าผู้เขียนจะได้มีโอกาสทำเว็บใหม่ทั้งหมดจาก Rails แล้ว ผู้เขียนยังได้มีโอกาสที่จะนำเอาโปรเจค Open Source ที่ทำจาก RoR มา Custom พบว่าเราสามารถที่จะแก้โปรแกรมนั้นโดยเราเขียนโค้ดให้ “ขี่” อยู่บน Application เดิม ๆ ได้ โดยเราสามารถที่จะ Override class ในส่วนของ Logic หรือแม้แต่สั่งให้ Render หน้าเว็บเพจโดยแทรกส่วนที่เราต้องการเสริมไปอย่างเดียวก็ได้&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;แต่มันก็ไม่ได้น่ารักไปซะหมด&quot;&gt;แต่มันก็ไม่ได้น่ารักไปซะหมด..&lt;/h3&gt;
 
 &lt;p&gt;ครับ เหรียญมันก็ต้องมีสองด้าน ถึงจะดูน่ารักขนาดไหนแต่ลึก ๆ ลงไปก็จะเจอกับความดื้อรั้นให้หัวเสียเล่นอยู่บ้าง&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;**ก้นใหญ่ย้ายยาก **ด้วยความที่เป็นภาษาอันแสนครบเครื่อง ดังนั้นในหนึ่งคำสั่งงาย ๆ ที่เราใช้ จะประกอบไปด้วยเวทย์มนต์แสนวิเศษที่ตัวเฟรมเวิร์กจัดเตรียมไว้ให้ ซึ่งบางทีก็จะดูเกินความจำเป็น และช้า (ซึ่งมีกระแสบ่นในเรื่องนี้เยอะมาก เมื่อมีคนพยายามถามว่า RoR น่าศึกษาไหม)&lt;/li&gt;
-  &lt;li&gt;**กว่าจะได้รักกัน **กว่าเราจะได้รักกัน เราก็ต้องจีบกันก่อนใช่ไหมครับ ช่วงจีบนี่เป็นอะไรที่นานมากกว่าเราจะได้เข้าใจกัน ด้วยความที่มันเน้นเรื่องของ Convention over Configuration คือบางอย่างเราก็ต้องทำตามมันครับ เพื่อที่จะให้ชีวิตการทำงานของเรามันราบรื่น ไม่ไปขัดขวางความมหัศจรรย์ของมัน ก็นับว่าเป็นเวลานานที่กว่าจะศึกษาดูใจกันครับ
-    &lt;h3 id=&quot;สรุปน่าใช้ไหม&quot;&gt;&lt;strong&gt;สรุปน่าใช้ไหม?&lt;/strong&gt;&lt;/h3&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ก้นใหญ่ย้ายยาก&lt;/strong&gt; ด้วยความที่เป็นภาษาอันแสนครบเครื่อง ดังนั้นในหนึ่งคำสั่งงาย ๆ ที่เราใช้ จะประกอบไปด้วยเวทย์มนต์แสนวิเศษที่ตัวเฟรมเวิร์กจัดเตรียมไว้ให้ ซึ่งบางทีก็จะดูเกินความจำเป็น และช้า (ซึ่งมีกระแสบ่นในเรื่องนี้เยอะมาก เมื่อมีคนพยายามถามว่า RoR น่าศึกษาไหม)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;กว่าจะได้รักกัน&lt;/strong&gt; กว่าเราจะได้รักกัน เราก็ต้องจีบกันก่อนใช่ไหมครับ ช่วงจีบนี่เป็นอะไรที่นานมากกว่าเราจะได้เข้าใจกัน ด้วยความที่มันเน้นเรื่องของ Convention over Configuration คือบางอย่างเราก็ต้องทำตามมันครับ เพื่อที่จะให้ชีวิตการทำงานของเรามันราบรื่น ไม่ไปขัดขวางความมหัศจรรย์ของมัน ก็นับว่าเป็นเวลานานที่กว่าจะศึกษาดูใจกันครับ&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;สรุปน่าใช้ไหม&quot;&gt;&lt;strong&gt;สรุปน่าใช้ไหม?&lt;/strong&gt;&lt;/h3&gt;
 
 &lt;p&gt;ตัว RoR นี่ผมว่าน่าใช้สำหรับงานสเกลระดับเล็ก ๆ ถึงกลาง ๆ ถึงแม้ว่าตัวมันจะมีกระแสว่าช้า แต่พอเอา RoR ไป Deploy เป็น Production แล้ว พบว่ามันก็ไม่ได้ช้ามากอย่างที่เค้าว่ากันนะครับ ตัว Resource ที่ใช้งานตอน Production ก็จะถูก Rails ทำการ Precompile ให้เราเรียบร้อย รวมถึงตัว DB ก็จะมีเรื่อง Cache เข้ามาช่วยแบบที่เราไม่ต้องจัดการเองเลยครับ เอาเป็นว่าใช้แล้วไม่ผิดหวังแน่นอนครับ&lt;/p&gt;
 
