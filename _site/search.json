@@ -86,6 +86,138 @@
       "date"     : "2017-11-21 00:00:00 +0700",
       "description" : ""
 
+    } ,
+  
+    {
+
+      "title"    : "ขอต่อต้านการใช้มือถือผิดกาลเทศะ",
+      "url"      : "/2011/07/23/bad-manner-on-using-phone",
+      "category" : "",
+      "tags"     : "",
+      "date"     : "2011-07-23 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Swensen&#39;s ice cream",
+      "url"      : "/2011/07/21/swensens-icecream",
+      "category" : "",
+      "tags"     : "leisure",
+      "date"     : "2011-07-21 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "บันทึกกันลืม - Import/Export ฐานข้อมูล MySQL",
+      "url"      : "/2011/06/01/import-export-mysql",
+      "category" : "",
+      "tags"     : "database, mysql",
+      "date"     : "2011-06-01 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "ทดสอบการใช้ MS-Word เขียน Blog",
+      "url"      : "/2011/04/28/blogging-using-ms-word",
+      "category" : "",
+      "tags"     : "blogging",
+      "date"     : "2011-04-28 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "ย้ายพื้นที่ใช้สอยบน OpenWRT มาอยู่บน Flash Drive",
+      "url"      : "/2011/04/27/using-flash-drive-on-openwrt",
+      "category" : "",
+      "tags"     : "openwrt, linux, filesystem, mount",
+      "date"     : "2011-04-27 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "เส้นทางปั่นจักรยานรอบคลอง ร.1",
+      "url"      : "/2011/02/01/canal-r1",
+      "category" : "",
+      "tags"     : "cycling, hatyai",
+      "date"     : "2011-02-01 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "เส้นทางปั่นจักรยานรอบเมืองหาดใหญ่",
+      "url"      : "/2011/01/31/hatyai-cycling",
+      "category" : "",
+      "tags"     : "cycling, hatyai",
+      "date"     : "2011-01-31 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "บันทึกช่วยจำ - ภาษาที่ใช้ในการเก็บข้อมูลบริบทและการให้เหตุผล",
+      "url"      : "/2010/08/31/context-representation-and-reasoning",
+      "category" : "",
+      "tags"     : "reasoning, context information, context-aware, damn+oil, ontology, owl, rules language, semantic web, swrl",
+      "date"     : "2010-08-31 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "สรุปคร่าว ๆ Grails + AJAX",
+      "url"      : "/2010/08/07/grails-ajax",
+      "category" : "",
+      "tags"     : "ajax, grails, web development",
+      "date"     : "2010-08-07 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "Context Information, Presence and Rich Presence",
+      "url"      : "/2010/08/02/context-information-presence-and-rich-presence",
+      "category" : "",
+      "tags"     : "communication, context information, context-aware, presence, rich presence",
+      "date"     : "2010-08-02 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "ติดตั้ง Windows 7 จาก Bootable USB",
+      "url"      : "/2010/07/18/windows7-create-bootable-usb",
+      "category" : "",
+      "tags"     : "windows, installation",
+      "date"     : "2010-07-18 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
+      "title"    : "แนะนำ KAON2",
+      "url"      : "/2010/07/08/introduction-kaon2",
+      "category" : "",
+      "tags"     : "ontology",
+      "date"     : "2010-07-08 00:00:00 +0700",
+      "description" : ""
+
     } 
   
 ]
