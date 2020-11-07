@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>MM's Blog</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2020-11-06T22:32:17+07:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Difference between font formats</title>
+   <link href="http://localhost:4000/2019/08/31/difference-between-font-formats"/>
+   <updated>2019-08-31T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2019/08/31/difference-between-font-formats</id>
+   <content type="html">&lt;p&gt;Lorem ipsum dolor amet tousled viral art party blue bottle single-origin coffee cardigan, selvage man braid helvetica. Banh mi taxidermy meditation microdosing. Selvage cornhole YOLO, small batch vexillologist raclette VHS prism sustainable 8-bit ugh semiotics letterpress disrupt pop-up. Celiac shabby chic ugh, jianbing whatever kitsch tattooed edison bulb kogi irony etsy.&lt;/p&gt;
+
+&lt;p&gt;Franzen polaroid hammock iceland blue bottle woke disrupt tilde kale chips raw denim ramps vaporware before they sold out irony. Narwhal vaporware offal shaman celiac kinfolk activated charcoal salvia lomo irony readymade normcore. Yr activated charcoal kombucha, man braid whatever biodiesel hella crucifix adaptogen bicycle rights small batch skateboard mixtape. Hot chicken sustainable green juice 90’s. Ennui kickstarter hella pug, meggings man bun shaman messenger bag. Chambray adaptogen kombucha pug affogato, kogi green juice distillery ugh banh mi.&lt;/p&gt;
+
+&lt;p&gt;VHS roof party waistcoat cold-pressed, street art wolf master cleanse affogato franzen. Shaman iceland pour-over intelligentsia typewriter tilde, pitchfork copper mug. Wayfarers kickstarter adaptogen vinyl beard kombucha. Organic pinterest master cleanse, mixtape fam gentrify lo-fi kogi.&lt;/p&gt;
+
+&lt;p&gt;Salvia blue bottle fanny pack mlkshk normcore YOLO viral umami four dollar toast skateboard. Chambray taxidermy slow-carb street art chartreuse. Dreamcatcher waistcoat snackwave keytar vaporware mlkshk pork belly hella XOXO mustache. Tattooed semiotics edison bulb, disrupt polaroid craft beer vape enamel pin bespoke flannel letterpress brooklyn subway tile copper mug. Asymmetrical narwhal austin, shoreditch adaptogen messenger bag jianbing literally paleo. Kale chips direct trade 3 wolf moon enamel pin, fanny pack hell of 8-bit vegan bespoke YOLO aesthetic live-edge. Retro succulents before they sold out whatever bushwick.&lt;/p&gt;
+
+&lt;p&gt;Actually hella you probably haven’t heard of them quinoa try-hard la croix. Street art schlitz actually hell of pour-over air plant. Post-ironic franzen brunch mumblecore readymade. Food truck photo booth polaroid, gochujang vegan street art yr before they sold out man bun. Tilde selfies chia pitchfork everyday carry post-ironic mumblecore sartorial VHS master cleanse activated charcoal biodiesel williamsburg cronut jean shorts. Poutine helvetica keffiyeh butcher pop-up.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Automated installation of software on fresh Mac</title>
+   <link href="http://localhost:4000/2018/04/24/automated-install-on-mac"/>
+   <updated>2018-04-24T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2018/04/24/automated-install-on-mac</id>
+   <content type="html">&lt;p&gt;In this moment of time, I have to swap my MBA with my girlfriend’s MBP. So, I think it would be better if I can use some tools to automatically install some essentials software on a new Mac. Here is a method of mine:&lt;/p&gt;
+
+&lt;p&gt;Homebrew is a tool that I’ve chosen, it is a package manager on Mac which can be install some software for me. You can find more information of Homebrew on &lt;a href=&quot;http://brew.sh/&quot;&gt;http://brew.sh/&lt;/a&gt;. And its extension is Homebrew Cask, more information &lt;a href=&quot;https://caskroom.github.io/&quot;&gt;https://caskroom.github.io/&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;But, there is a new way better than input each line of brew command separately. It is Brewfile. (&lt;a href=&quot;https://github.com/Homebrew/homebrew-bundle&quot;&gt;https://github.com/Homebrew/homebrew-bundle&lt;/a&gt;, &lt;a href=&quot;https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew&quot;&gt;https://robots.thoughtbot.com/brewfile-a-gemfile-but-for-homebrew&lt;/a&gt;) I just create Brewfile and run brew bundle command. Everything specify in Brewfile will be install.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gist.github.com/zekzit/67213156aeb4f92be293697aa31951b7&quot;&gt;Here is my Brewfile&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Here is a good example for more automated Mac install:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://gist.github.com/millermedeiros/6615994&quot;&gt;https://gist.github.com/millermedeiros/6615994&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&quot;&gt;https://mattstauffer.co/blog/setting-up-a-new-os-x-development-machine-part-2-global-package-managers&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;More Mac settings I expected to do:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Never sleep while on power adapter&lt;/li&gt;
+  &lt;li&gt;Tap to click&lt;/li&gt;
+  &lt;li&gt;Three-finger drag&lt;/li&gt;
+  &lt;li&gt;Put display to sleep on upper left hot-corner&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>PostgreSQL vs. MySQL vs. SQLite</title>
+   <link href="http://localhost:4000/2018/04/23/postgresql-mysql-sqlite"/>
+   <updated>2018-04-23T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2018/04/23/postgresql-mysql-sqlite</id>
+   <content type="html">&lt;p&gt;One of questions that I asked myself when I need to do select some (RDBMS) DB technology for my project is: which DB is the most appropriate to my project. My head pop out these three RDBMS: PostgreSQL, MySQL and SQLite.&lt;/p&gt;
+
+&lt;p&gt;Many projects I deal with are web-based. So I can eliminate SQLite from my choice (It’s file based and I think it isn’t good on scalable). But MySQL and PostgreSQL are still in my choices. I familiar with MySQL so I chose MySQL as DB in my many projects. But I still wonder when do I need to use PostgreSQL. And today I do some research on this question.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems&quot;&gt;SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database Management Systems&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://db-engines.com/en/system/MySQL%3BPostgreSQL&quot;&gt;System Properties Comparison MySQL vs. PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After reading those two articles. (my research isn’t deep more than reading one on two articles, sorry :D) I realize that MySQL is gain more popularity than PostgreSQL in term of easy to use and has capability to handle several projects. But it some projects that has more complex query, complex procedure, fully-implemented SQL from standards and need more data integrity. PostgreSQL is a good option to use.&lt;/p&gt;
+
+&lt;p&gt;Choose wisely! :D&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>My Docker 101 - An Introduction</title>
+   <link href="http://localhost:4000/2018/03/14/my-docker-101-introduction"/>
+   <updated>2018-03-14T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2018/03/14/my-docker-101-introduction</id>
+   <content type="html">&lt;p&gt;Due to my hosting will be expired soon. My applications, data and configuration on exists host should be migrate. But my migration plan for now is just a traditional method: rent a new VM from my selected vendor, install prerequisite software, config them to be ready for production, migrate data from existing host to a new one.&lt;/p&gt;
+
+&lt;p&gt;I tired of doing software installation and edit its configuration files. So, I plan to try Docker on my new host. I thought it should be more easy to migrate next time and I’m a fan of automation process &amp;amp; DevOps. Let try it! My chance has come!&lt;/p&gt;
+
+&lt;p&gt;This article is just an introduction to my next articles that about me trying to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dockerize my application&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Wire it up with required components and get it work&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Run it in production environment&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please feel free to follow me if you’re interesting in this topic too.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ทำไมถึง ❤️ Ruby on Rails</title>
+   <link href="http://localhost:4000/2017/11/21/why-love-rails"/>
+   <updated>2017-11-21T00:00:00+07:00</updated>
+   <id>http://localhost:4000/2017/11/21/why-love-rails</id>
+   <content type="html">&lt;p&gt;ช่วงไม่กี่เดือนที่ผ่านมา ได้มีโอกาสทำเว็บไซต์ใหม่จากเริ่มต้นที่เป็น Web Application ง่าย ๆ หลังจากที่ได้ลองมาหลายเฟรมเวิร์กทั้งทางฝั่ง Node (Express.js), Python (Django) หรือทางฝั่ง Java (Springboot, Play) ก็พบว่ามี Learning curve สูงใช้ได้สำหรับตัวเอง ดังนั้นก็เลยมาจบที่ RoR ที่จะมาเล่าให้ฟังในบทความนี้&lt;/p&gt;
+
+&lt;p&gt;สิ่งแรกที่เย้ายวนให้มาทาง RoR คือการที่มัน Generate code จำพวกที่เป็น CRUD ได้อย่างง่าย ๆ มาหมดทั้งตัว Model, View, Controller, Test และ Logic ที่เขียนไว้ให้ทำงานจบได้ในตัวมันเองอยู่แล้ว มันทำให้น่าสนใจมากเพราะโจทย์ตัวเว็บของเราไม่ได้ซับซ้อนมาก คาดว่า Scaffold ตามโมเดลแล้วก็จบ แต่เมื่อเริ่มจับแล้ว พบว่ามีอะไรที่ลึกซึ้งกว่านั้น..&lt;/p&gt;
+
+&lt;h1 id=&quot;ความน่ารักเหนือคู่แข่ง&quot;&gt;ความน่ารักเหนือคู่แข่ง&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;ดีพร้อม&lt;/strong&gt; เมื่อเทียบกับเฟรมเวิร์กอื่น ๆ แล้ว Rails เป็นเฟรมเวิร์กที่ครบเครื่องมาก ไม่ว่าจะเป็นส่วนของ ORM, Database Migration, SCSS, CoffeeScript, Template, Mailer และอื่น ๆ อีกมาก เรียกได้ว่าถ้าเราเลือกใช้เฟรมเวิร์กนี้แล้ว เราไม่ต้องหา Module อื่น ๆ มาเพิ่มเติมมากมายนักสำหรับการทำ Web Application ธรรมดา ๆ สักอันหนึ่ง&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;คุยกันได้, คุยกันง่าย&lt;/strong&gt; ด้วยตัวภาษา Ruby เองซึ่งเป็นภาษาที่ค่อนข้าง High level ทำให้ตัวโค้ดค่อนข้างสื่อความหมาย และตัวเฟรมเวิร์กเองก็ค่อนข้างจะตระเตรียมฟังก์ชันพื้นฐานให้ครบถ้วน ทำให้โค้ดที่เขียนเป็น Logic ทำได้สั้นและกระชับ นอกจากนี้ตัว Rails ยังเตรียม Console ไว้ เพื่อให้เราสามารถเขียนคำสั่งเพื่อจัดการกับ Model หรือลองส่วนของโค้ดได้ทันที&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;พร้อมขี่&lt;/strong&gt; นอกจากว่าผู้เขียนจะได้มีโอกาสทำเว็บใหม่ทั้งหมดจาก Rails แล้ว ผู้เขียนยังได้มีโอกาสที่จะนำเอาโปรเจค Open Source ที่ทำจาก RoR มา Custom พบว่าเราสามารถที่จะแก้โปรแกรมนั้นโดยเราเขียนโค้ดให้ “ขี่” อยู่บน Application เดิม ๆ ได้ โดยเราสามารถที่จะ Override class ในส่วนของ Logic หรือแม้แต่สั่งให้ Render หน้าเว็บเพจโดยแทรกส่วนที่เราต้องการเสริมไปอย่างเดียวก็ได้&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;แต่มันก็ไม่ได้น่ารักไปซะหมด&quot;&gt;แต่มันก็ไม่ได้น่ารักไปซะหมด..&lt;/h1&gt;
+
+&lt;p&gt;ครับ เหรียญมันก็ต้องมีสองด้าน ถึงจะดูน่ารักขนาดไหนแต่ลึก ๆ ลงไปก็จะเจอกับความดื้อรั้นให้หัวเสียเล่นอยู่บ้าง&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ก้นใหญ่ย้ายยาก&lt;/strong&gt; ด้วยความที่เป็นภาษาอันแสนครบเครื่อง ดังนั้นในหนึ่งคำสั่งงาย ๆ ที่เราใช้ จะประกอบไปด้วยเวทย์มนต์แสนวิเศษที่ตัวเฟรมเวิร์กจัดเตรียมไว้ให้ ซึ่งบางทีก็จะดูเกินความจำเป็น และช้า (ซึ่งมีกระแสบ่นในเรื่องนี้เยอะมาก เมื่อมีคนพยายามถามว่า RoR น่าศึกษาไหม)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;กว่าจะได้รักกัน&lt;/strong&gt; กว่าเราจะได้รักกัน เราก็ต้องจีบกันก่อนใช่ไหมครับ ช่วงจีบนี่เป็นอะไรที่นานมากกว่าเราจะได้เข้าใจกัน ด้วยความที่มันเน้นเรื่องของ Convention over Configuration คือบางอย่างเราก็ต้องทำตามมันครับ เพื่อที่จะให้ชีวิตการทำงานของเรามันราบรื่น ไม่ไปขัดขวางความมหัศจรรย์ของมัน ก็นับว่าเป็นเวลานานที่กว่าจะศึกษาดูใจกันครับ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;สรุปน่าใช้ไหม&quot;&gt;สรุปน่าใช้ไหม?&lt;/h1&gt;
+&lt;p&gt;ตัว RoR นี่ผมว่าน่าใช้สำหรับงานสเกลระดับเล็ก ๆ ถึงกลาง ๆ ถึงแม้ว่าตัวมันจะมีกระแสว่าช้า แต่พอเอา RoR ไป Deploy เป็น Production แล้ว พบว่ามันก็ไม่ได้ช้ามากอย่างที่เค้าว่ากันนะครับ ตัว Resource ที่ใช้งานตอน Production ก็จะถูก Rails ทำการ Precompile ให้เราเรียบร้อย รวมถึงตัว DB ก็จะมีเรื่อง Cache เข้ามาช่วยแบบที่เราไม่ต้องจัดการเองเลยครับ เอาเป็นว่าใช้แล้วไม่ผิดหวังแน่นอนครับ&lt;/p&gt;
+
+&lt;p&gt;ต้องลองถึงจะรัก ❤️&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
