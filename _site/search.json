@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "บทเรียนเกี่ยวกับ CSRF",
+      "url"      : "/2020/11/08/introduction-to-csrf",
+      "category" : "",
+      "tags"     : "security, web development",
+      "date"     : "2020-11-08 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
       "title"    : "ก้าวแรกสู่ภาษาแบบ Functional อย่างเต็มตัว",
       "url"      : "/2020/03/21/functional-programming",
       "category" : "",
@@ -27,7 +38,7 @@
       "title"    : "Service Worker is not that superhero!",
       "url"      : "/2019/08/06/service-worker-is-not-that-superhero",
       "category" : "",
-      "tags"     : "web, development",
+      "tags"     : "web development",
       "date"     : "2019-08-06 00:00:00 +0700",
       "description" : ""
 

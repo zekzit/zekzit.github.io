@@ -2,7 +2,7 @@
 layout:	post
 title:	"Service Worker is not that superhero!"
 date:	2019-08-06
-tags: [web, development]
+tags: [web development]
 ---
 
   ครั้งนี้เป็นบันทึกความพยายามในการ Hack เล็ก ๆ ในตัว Web Application ตัวหนึ่ง เมื่อเรามีโจทย์ว่าเราต้องการที่จะเปลี่ยนข้อมูลใน Cookie ในทุก ๆ Request ที่เกิดขึ้นให้เป็นไปตามที่เราต้องการ จากเดิมที่มันถูกทำงานอย่างอัตโนมัติโดย Browser ของเรา
