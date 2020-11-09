@@ -2,6 +2,17 @@
   
     {
 
+      "title"    : "ยิ่งคบ.. ยิ่ง ❤️ Ruby on Rails",
+      "url"      : "/2020/11/09/still-love-ruby-on-rails",
+      "category" : "",
+      "tags"     : "ruby on rails",
+      "date"     : "2020-11-09 00:00:00 +0700",
+      "description" : ""
+
+    } ,
+  
+    {
+
       "title"    : "บทเรียนเกี่ยวกับ CSRF",
       "url"      : "/2020/11/08/introduction-to-csrf",
       "category" : "",
