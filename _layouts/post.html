@@ -5,8 +5,17 @@ layout: default
 <section class="post">
   <h2>{{ page.title }}</h2>
   {{ content }}
-  <span class="meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> &middot; {% for tag in page.tags %}
-    <a href="/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+  <span class="meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> &middot; {% for tag in page.tags %}
+    <a href="/tag/{{tag}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}<br/>
+    <p style="margin-top:1em;">
+      <a href='https://ko-fi.com/T6T32KP2O' target='_blank'>
+        <img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi1.png?v=2' border='0'
+        alt='Buy Me a Coffee at ko-fi.com' />
+      </a>
+    </p>
+  </span>
 </section>
+
 
 

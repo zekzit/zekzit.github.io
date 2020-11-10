@@ -33,6 +33,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-analytics
 
 collections:
   pages:
@@ -60,3 +61,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+jekyll_analytics:
+  GoogleAnalytics:          # Add, if you want to track with Google Analytics
+    id: G-TXB095390R          # Required - replace with your tracking id
+    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
