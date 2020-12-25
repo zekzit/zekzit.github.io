@@ -118,7 +118,7 @@ Fat jar ก็คือ JAR ที่ประกอบไปด้วย librar
 
 ## การสร้าง WAR file
 
-ถ้าหากเราสร้างเป็น Application ที่เป็น Serverless Cloud หรือ ใส่ไฟล์ลงใน Application Server ต่าง ๆ ก็มี (Maven WAR Plugin)[http://maven.apache.org/plugins/maven-war-plugin/] ให้ใช้นะครับ โดยหากเราใช้ Spring Boot เราก็ใช้ Spring Boot Maven Plugin ได้เช่นกัน แต่เราอาจจะต้องระบุว่าเราใช้ Servlet Container ตัวไหน เพื่อให้ตัว Plugin จะได้กำหนดค่าที่เหมาะสมกับ Servlet Container ที่เราใช้ได้
+ถ้าหากเราสร้างเป็น Application ที่เป็น Serverless Cloud หรือ ใส่ไฟล์ลงใน Application Server ต่าง ๆ ก็มี [Maven WAR Plugin](http://maven.apache.org/plugins/maven-war-plugin/) ให้ใช้นะครับ โดยหากเราใช้ Spring Boot เราก็ใช้ Spring Boot Maven Plugin ได้เช่นกัน แต่เราอาจจะต้องระบุว่าเราใช้ Servlet Container ตัวไหน เพื่อให้ตัว Plugin จะได้กำหนดค่าที่เหมาะสมกับ Servlet Container ที่เราใช้ได้
 
 ## การเตรียมขึ้น Cloud
 
@@ -128,6 +128,6 @@ Fat jar ก็คือ JAR ที่ประกอบไปด้วย librar
  - ตัวติดตั้ง [IzPack](http://izpack.org/), [Launch4j](http://launch4j.sourceforge.net/), [NSIS (Nullsoft Scriptable Install System)](https://nsis.sourceforge.io/Main_Page)
  - สร้างเป็น Machine Image [HashiCorp Packer](https://www.packer.io/), [Netflix aminator](https://github.com/Netflix/aminator)
 
- ## การสร้างเป็น Container
+## การสร้างเป็น Container
 
- การสร้าง Docker image ก็สามารถทำได้ด้วยการสร้าง Dockerfile อย่างทั่วไป หรือจะใช้เครื่องมืออย่าง [fabric8 Docker Maven Plugin](https://github.com/fabric8io/docker-maven-plugin) [Spotify Docker Maven Project](https://github.com/spotify/dockerfile-maven) ก็ได้
+การสร้าง Docker image ก็สามารถทำได้ด้วยการสร้าง Dockerfile อย่างทั่วไป หรือจะใช้เครื่องมืออย่าง [fabric8 Docker Maven Plugin](https://github.com/fabric8io/docker-maven-plugin), [Spotify Docker Maven Project](https://github.com/spotify/dockerfile-maven) ก็ได้
